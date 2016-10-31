@@ -1,0 +1,9 @@
+- name: Log into private registry and force re-authorization
+  docker_login:
+    registry: {{ registry_url }}
+    username: {{ registry_username }}
+    password: {{ registry_password }}
+    reauthorize: yes
+
+- name : docker image build 
+  shell: docker build -t {{ registry_url }}/castro:{{ docker_tag.stdout }} chdir={{ git_repo_dest}}/tonic-schedular

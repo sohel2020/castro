@@ -1,0 +1,7 @@
+# ---
+# dependencies:
+#   - { role: git }
+
+git_repo_address: https://github.com/comoyo/tonic-schedular.git
+git_repo_dest: /home/ubuntu/
+git_branch_name: master
