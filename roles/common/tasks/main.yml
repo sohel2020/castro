@@ -1,8 +1,8 @@
 
 - name : install dependency
-  apt: name={{ item }} state=present force=yes update_cache=yes
-  with_items:
-    - python-pip
+  apt: name=python-pip state=present force=yes update_cache=yes
+#  with_items:
+#    - python-pip
 - name : docker py install
   pip: name=docker-py 
   become: True
