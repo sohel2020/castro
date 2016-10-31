@@ -18,6 +18,8 @@
   #   - name: restart apache
   #     service: name=httpd state=restarted
   roles:
+    - docker 
+    - common
     - ansible-kubectl
     - git-project
     - dockertag
