@@ -1,6 +1,9 @@
 ---
 - hosts: localhost
   connection: local
+  become: true
+  become_method: sudo
+  become_user: ubuntu
   
   # tasks:
   # - name: ensure apache is at the latest version
@@ -15,4 +18,8 @@
   #   - name: restart apache
   #     service: name=httpd state=restarted
   roles:
+    - ansible-kubectl
+    - git-project
     - dockertag
+    - dockerbuild
+    - deployer

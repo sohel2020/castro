@@ -7,3 +7,6 @@
 
 - name : docker image build 
   shell: docker build -t {{ registry_url }}/castro:{{ docker_tag.stdout }} chdir={{ git_repo_dest}}/tonic-schedular
+
+- name: docker image push to private registry
+  shell: docker push {{ registry_url }}/castro:{{ docker_tag.stdout }}
