@@ -22,4 +22,4 @@
     - git-project
     - dockertag
     - dockerbuild
-    - deployer
+#    - deployer

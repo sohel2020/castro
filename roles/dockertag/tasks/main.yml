@@ -2,7 +2,5 @@
 - name: docker tag builder
   shell: git log | head -n 1 | awk '{print $2}'| cut -c 1-7 chdir={{project_path}}
   register: docker_tag
-- name: Name for debug module.
-  debug: var={{docker_tag.stdout}}
 
 
