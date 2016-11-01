@@ -8,8 +8,8 @@
     - docker 
     - common
     - git
-    - ansible-kubectl
+    - kubectl-install
     - git-project
     - dockertag
     - dockerbuild
-#    - deployer
+    - deployer
